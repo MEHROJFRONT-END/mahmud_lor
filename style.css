@@ -1,0 +1,1923 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html, body{
+  overflow-x:hidden;
+}
+
+img{
+  max-width:100%;
+}
+
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#f8fafc;
+  color:#0f172a;
+  line-height:1.6;
+}
+
+/* CONTAINER */
+.container{
+  width:1200px;
+  margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:86px;
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #eef1f6;
+  z-index:1000;
+  overflow:hidden;
+}
+
+.header-container{
+  width:1240px;
+  height:100%;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* LEFT */
+
+.header-left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-circle{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#2f6bff,#4c3fff);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+}
+
+.logo-title{
+  font-weight:700;
+  font-size:18px;
+}
+
+.logo-sub{
+  font-size:13px;
+  color:#64748b;
+}
+
+/* NAV */
+
+.nav{
+  display:flex;
+  gap:40px;
+}
+
+.nav a{
+  text-decoration:none;
+  color:#0f172a;
+  font-weight:500;
+  font-size:16px;
+  transition:.25s;
+}
+
+.nav a:hover{
+  color:#2f6bff;
+}
+
+/* RIGHT */
+
+.header-right{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+/* LANG */
+
+.lang-switch{
+  display:flex;
+  background:#f1f5ff;
+  padding:4px;
+  border-radius:12px;
+}
+
+.lang-switch button{
+  border:none;
+  background:transparent;
+  padding:8px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:500;
+}
+
+.lang-switch .active{
+  background:#2f6bff;
+  color:white;
+}
+
+/* PHONE BTN */
+
+.phone-btn{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:linear-gradient(135deg,#2f6bff,#4c3fff);
+  color:white;
+  text-decoration:none;
+  padding:12px 18px;
+  border-radius:14px;
+  font-weight:600;
+  box-shadow:0 6px 18px rgba(47,107,255,0.25);
+  transition:.3s;
+}
+
+.phone-btn:hover{
+  transform:translateY(-2px);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  padding:120px 0 60px;
+  background:#f7f9fc;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+/* LEFT */
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:#e9f1ff;
+  color:#2f6bff;
+  padding:8px 14px;
+  border-radius:20px;
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+.hero-title{
+  font-size:56px;
+  font-weight:800;
+  line-height:1.1;
+  margin-bottom:20px;
+}
+
+.hero-text{
+  font-size:18px;
+  color:#64748b;
+  margin-bottom:30px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:16px;
+  margin-bottom:40px;
+}
+
+.btn-primary{
+  background:#2f6bff;
+  color:white;
+  padding:14px 26px;
+  border-radius:10px;
+  font-weight:600;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  transition:.3s;
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 25px rgba(37,99,235,0.25);
+}
+
+.btn-outline{
+  border:1.5px solid #2f6bff;
+  color:#2f6bff;
+  padding:12px 24px;
+  border-radius:10px;
+  font-weight:600;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+/* STATS */
+
+.hero-stats{
+  display:flex;
+  gap:50px;
+}
+
+.hero-stats strong{
+  font-size:28px;
+  color:#2f6bff;
+  display:block;
+}
+
+.hero-stats span{
+  color:#64748b;
+  font-size:14px;
+}
+
+/* RIGHT */
+
+.hero-right{
+  position:relative;
+}
+
+.hero-img{
+  width:100%;
+  height:500px;
+  object-fit:cover;
+  border-radius:24px;
+  transition:transform .6s ease, box-shadow .6s ease;
+}
+
+/* FLOAT ANIMATION IMAGE */
+
+@keyframes floatDoctor{
+  0%{ transform:translateY(0); }
+  50%{ transform:translateY(-10px); }
+  100%{ transform:translateY(0); }
+}
+
+.hero-img{
+  animation:floatDoctor 6s ease-in-out infinite;
+}
+
+.hero-img:hover{
+  transform:scale(1.03);
+  box-shadow:0 25px 60px rgba(0,0,0,0.12);
+}
+
+/* DOCTOR CARD */
+
+.doctor-card{
+  position:absolute;
+  bottom:-40px;
+  left:40px;
+  background:white;
+  padding:20px 26px;
+  border-radius:16px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.08);
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.doctor-avatar{
+  width:54px;
+  height:54px;
+  background:#2f6bff;
+  color:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+}
+
+/* ================= WHY TRUST ================= */
+
+.why-trust{
+  padding:90px 0;
+  background:#f6f8fc;
+}
+
+.section-title{
+  text-align:center;
+  font-size:34px;
+  font-weight:700;
+}
+
+.title-line{
+  width:70px;
+  height:4px;
+  background:#2563eb;
+  margin:12px auto 50px;
+  border-radius:10px;
+}
+
+/* GRID */
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+}
+
+/* CARD */
+
+.trust-card{
+  background:#fff;
+  padding:36px 28px;
+  border-radius:18px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.05);
+  transition:.35s;
+  text-align:center;
+}
+
+.trust-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 18px 40px rgba(0,0,0,0.08);
+}
+
+/* ICON */
+
+.icon-circle{
+  width:70px;
+  height:70px;
+  background:linear-gradient(135deg,#2563eb,#4f46e5);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:auto auto 18px;
+}
+
+.icon-circle i{
+  width:28px;
+  height:28px;
+  stroke:white;
+}
+
+/* TEXT */
+
+.trust-card h3{
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.trust-card p{
+  color:#64748b;
+  font-size:15px;
+}
+
+/* ================= FLOATING CALL ================= */
+
+.floating-call{
+  position:fixed;
+  right:30px;
+  bottom:30px;
+  background:linear-gradient(135deg,#2563eb,#4f46e5);
+  color:#fff;
+  padding:16px 24px;
+  border-radius:50px;
+  box-shadow:0 12px 30px rgba(37,99,235,.4);
+  cursor:pointer;
+  display:none;
+  align-items:center;
+  gap:10px;
+  transition:.3s;
+}
+
+.floating-call:hover{
+  transform:scale(1.05);
+}
+
+/* ================= REVEAL ANIMATION ================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .8s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ICON FIX — MAKE THEM WHITE */
+
+.icon-circle svg {
+  width: 28px;
+  height: 28px;
+  stroke: #ffffff !important;
+  color: #ffffff !important;
+}
+
+/* ================= SERVICES ================= */
+
+.services {
+  padding: 110px 0;
+  background: linear-gradient(180deg,#f6f8fc,#eef2f8);
+}
+
+.section-sub {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  font-size: 18px;
+  color: #64748b;
+}
+
+/* GRID */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* CARD */
+
+.service-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+  transition: all .35s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.10);
+}
+
+/* ICON BOX */
+
+.service-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.service-icon i {
+  color: #fff;
+  width: 28px;
+  height: 28px;
+}
+
+/* gradient colors */
+
+.service-icon.blue {
+  background: linear-gradient(135deg,#2f6bff,#2563eb);
+}
+
+.service-icon.teal {
+  background: linear-gradient(135deg,#0ea5e9,#06b6d4);
+}
+
+.service-icon.purple {
+  background: linear-gradient(135deg,#6366f1,#7c3aed);
+}
+
+/* TEXT */
+
+.service-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* CTA */
+
+.services-cta {
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* REMOVE old full width */
+
+.btn-primary.big {
+  display: inline-block;
+  padding: 18px 42px;
+  font-size: 16px;
+  border-radius: 60px;
+  width: auto;
+  min-width: 260px;
+
+  background: linear-gradient(135deg,#2f6bff,#2563eb);
+  box-shadow: 0 14px 35px rgba(37,99,235,0.35);
+
+  transition: all .3s ease;
+}
+
+.btn-primary.big:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 45px rgba(37,99,235,0.45);
+}
+
+/* WHY CHOOSE ME */
+
+.why-choose {
+  padding: 110px 0;
+  background: #f8fafc;
+}
+
+.section-sub {
+  text-align: center;
+  color: #64748b;
+  font-size: 18px;
+  margin-bottom: 60px;
+}
+
+.choose-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* CARD */
+
+.choose-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 38px 34px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.05);
+  transition: all .35s ease;
+  border: 1px solid #eef2f7;
+}
+
+.choose-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+}
+
+/* ICON */
+
+.choose-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.choose-icon i {
+  width: 30px;
+  height: 30px;
+  stroke: #fff;
+}
+
+/* gradient variants */
+
+.choose-icon.blue {
+  background: linear-gradient(135deg,#3b82f6,#2563eb);
+}
+
+.choose-icon.cyan {
+  background: linear-gradient(135deg,#06b6d4,#0891b2);
+}
+
+.choose-icon.purple {
+  background: linear-gradient(135deg,#7c3aed,#6366f1);
+}
+
+/* TEXT */
+
+.choose-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.choose-card p {
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+  .choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .choose-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.choose-icon svg {
+    color: white;
+}
+
+
+.service-icon svg {
+    color: white;
+}
+
+/* ================= EQUIPMENT SECTION ================= */
+
+.equipment {
+  padding: 110px 0;
+  background: #f7f9fd;
+}
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* IMAGE */
+
+.equipment-image {
+  width: 100%;
+}
+
+.equipment-image img {
+  width: 100%;
+  height: 100%;
+  max-height: 460px; /* based on 928x757 ratio */
+  object-fit: cover;
+  border-radius: 28px;
+  transition: transform .6s ease, box-shadow .6s ease;
+}
+
+.equipment-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.12);
+}
+
+/* CONTENT */
+
+.equipment-title {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #0f172a;
+  margin-bottom: 18px;
+}
+
+.equipment-text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #64748b;
+  margin-bottom: 28px;
+}
+
+/* LIST */
+
+.equipment-list {
+  list-style: none;
+  padding: 0;
+}
+
+.equipment-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  font-size: 16px;
+  color: #0f172a;
+}
+
+/* CHECK ICON */
+
+.check-icon {
+  min-width: 34px;
+  height: 34px;
+  background: linear-gradient(135deg,#2563eb,#4f46e5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-icon i {
+  width: 18px;
+  height: 18px;
+  stroke: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+
+  .equipment-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .equipment-image img {
+    max-height: 420px;
+  }
+
+  .equipment-title {
+    font-size: 30px;
+  }
+}
+
+.check-icon svg{
+  color: white;
+}
+
+
+/* BOOK SECTION */
+
+.book-section {
+  padding: 120px 0;
+  background: linear-gradient(135deg,#3b82f6,#4f46e5);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* TITLE */
+
+.book-title {
+  text-align: center;
+  font-size: 46px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.book-sub {
+  text-align: center;
+  font-size: 18px;
+  opacity: .9;
+  margin-bottom: 60px;
+}
+
+/* GRID */
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+/* CARD */
+
+.contact-card {
+  border-radius: 22px;
+  padding: 36px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  transition: .35s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ICON CIRCLE */
+
+.contact-icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.contact-icon-circle i {
+  width: 32px;
+  height: 32px;
+  color: white;
+}
+
+/* COLORS */
+
+.whatsapp {
+  background: #22c55e;
+}
+
+.call {
+  background: linear-gradient(135deg,#3b82f6,#2563eb);
+}
+
+.instagram {
+  background: linear-gradient(135deg,#8b5cf6,#ec4899);
+}
+
+/* HOVER */
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+/* ONLINE BOX */
+
+.online-box {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(14px);
+  border-radius: 26px;
+  padding: 40px;
+  text-align: center;
+}
+
+/* TOP */
+
+.online-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.online-top i {
+  width: 22px;
+  height: 22px;
+}
+
+/* CONTACTS */
+
+.online-contacts {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 30px;
+}
+
+.online-item h3 {
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+
+.online-item p {
+  opacity: .85;
+}
+
+/* TIME */
+
+.online-time {
+  opacity: .85;
+  font-size: 14px;
+}
+
+.online-box {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 55px 60px;
+  border-radius: 30px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(30px);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.15),
+    0 40px 80px rgba(0,0,0,0.18);
+}
+
+/* top */
+
+.online-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+
+  font-size: 17px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.95);
+}
+
+.online-top svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* cards wrapper */
+
+.online-contacts {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 35px;
+}
+
+/* inner cards */
+
+.online-item {
+  flex: 1;
+  padding: 28px 35px;
+  border-radius: 22px;
+
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(20px);
+
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12);
+}
+
+/* number */
+
+.online-item h3 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: .4px;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+/* label */
+
+.online-item p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+}
+
+/* bottom text */
+
+.online-time {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* REVIEWS SECTION */
+.reviews-section {
+  padding: 120px 0;
+  background: #f4f7fb;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 18px;
+}
+
+/* GRID */
+.reviews-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.review-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+.review-stars {
+  color: #fbbf24;
+  font-size: 18px;
+}
+
+.review-text {
+  margin: 20px 0;
+  color: #334155;
+  line-height: 1.6;
+}
+
+/* USER */
+.review-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#2563eb,#3b82f6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.user-name {
+  font-weight: 600;
+}
+
+.user-city {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* QUOTE ICON */
+.quote-icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 60px;
+  color: #dbeafe;
+}
+
+
+/* STATS */
+.stats-grid {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 35px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+}
+
+.stat-number {
+  font-size: 40px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.stat-label {
+  margin-top: 8px;
+  color: #64748b;
+}
+
+.faq-section {
+  padding: 100px 0;
+  background: #f6f8fc;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  width: 1100px;
+  margin: auto;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  color: #1a1f36;
+}
+
+.faq-line {
+  width: 70px;
+  height: 4px;
+  background: #2f6bff;
+  margin: 15px auto 50px;
+  border-radius: 10px;
+}
+
+/* FAQ items */
+
+.faq-item {
+  background: white;
+  border-radius: 24px;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  overflow: hidden;
+  transition: all .3s ease;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 22px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-question:hover {
+  background: #f4f7ff;
+}
+
+.faq-icon {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid #2f6bff;
+  border-bottom: 2px solid #2f6bff;
+  transform: translateY(-50%) rotate(45deg);
+  transition: .3s;
+}
+
+.faq-item.active .faq-icon {
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 28px;
+  font-size: 16px;
+  color: #6b7280;
+  line-height: 1.6;
+  transition: max-height .4s ease, padding .3s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 0 28px 20px;
+}
+
+
+/* CONTACT BLOCK */
+
+.faq-contact {
+  margin-top: 70px;
+  background: linear-gradient(135deg,#edf3ff,#f8fbff);
+  padding: 50px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.contact-btn {
+  margin-top: 20px;
+  background: linear-gradient(135deg,#2f6bff,#4a8cff);
+  border: none;
+  padding: 14px 36px;
+  color: white;
+  font-size: 16px;
+  border-radius: 40px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(47,107,255,0.25);
+  transition: .3s;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* MODAL */
+
+.modal {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(4px);
+  display:none;
+  justify-content:center;
+  align-items:center;
+}
+
+.modal-box {
+  background:white;
+  padding:40px;
+  border-radius:28px;
+  width:420px;
+  position:relative;
+}
+
+.modal-box input,
+.modal-box textarea {
+  width:100%;
+  margin-top:15px;
+  padding:14px;
+  border-radius:14px;
+  border:1px solid #e5e7eb;
+  font-size:15px;
+}
+
+.send-btn {
+  width:100%;
+  margin-top:20px;
+  padding:14px;
+  background:#2f6bff;
+  color:white;
+  border:none;
+  border-radius:16px;
+  cursor:pointer;
+}
+
+.modal-close {
+  position:absolute;
+  right:18px;
+  top:10px;
+  font-size:28px;
+  cursor:pointer;
+}
+
+
+.location-section {
+  padding: 90px 0;
+  background: #f4f7fb;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  color: #1c1f2a;
+}
+
+.section-line {
+  width: 80px;
+  height: 4px;
+  background: #2f6bff;
+  margin: 15px auto 50px;
+  border-radius: 10px;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.map-wrapper {
+  width: 100%;
+  height: 520px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* RIGHT SIDE */
+.location-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.info-card {
+  display: flex;
+  gap: 18px;
+  padding: 26px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+}
+
+.info-card h4 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.info-card p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.info-card span {
+  color: #8c8c8c;
+  font-size: 14px;
+}
+
+.closed {
+  color: red;
+}
+
+/* ICONS */
+.icon {
+  min-width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: white;
+}
+
+.blue { background: #2f6bff; }
+.green { background: #16b364; }
+.purple { background: #6c5ce7; }
+
+.gradient {
+  background: linear-gradient(135deg, #2f6bff, #7b61ff);
+}
+
+/* DIRECTIONS */
+.directions-card {
+  display: flex;
+  gap: 18px;
+  padding: 32px;
+  border-radius: 22px;
+  color: white;
+  background: linear-gradient(135deg, #2f6bff, #7b61ff);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.directions-card h4 {
+  font-size: 22px;
+}
+
+.map-btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 12px 24px;
+  background: white;
+  color: #2f6bff;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.map-btn:hover {
+  transform: scale(1.05);
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer {
+  background: #0c1a33;
+  color: #cbd5e1;
+  padding-top: 70px;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-container {
+  width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+/* LOGO */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.logo-circle {
+  width: 48px;
+  height: 48px;
+  background: #2f6bff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+}
+
+.brand h3 {
+  color: white;
+  margin-bottom: 3px;
+}
+
+.brand span {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.brand p {
+  margin-top: 14px;
+  line-height: 1.7;
+}
+
+/* TITLES */
+.footer-col h4 {
+  color: white;
+  margin-bottom: 18px;
+}
+
+/* SERVICES */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.footer-col ul li:hover {
+  color: white;
+  transform: translateX(4px);
+}
+
+/* CONTACT */
+.footer-contact {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.footer-contact i {
+  color: #2f6bff;
+}
+
+/* SOCIAL */
+.social {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+  align-items: center;
+}
+
+.social i {
+  font-size: 18px;
+}
+
+/* EMERGENCY CARD */
+.emergency {
+  margin-top: 20px;
+  padding: 18px;
+  background: #122447;
+  border-radius: 14px;
+}
+
+.emergency p {
+  color: #60a5fa;
+  font-size: 14px;
+}
+
+.emergency strong {
+  display: block;
+  color: white;
+  margin-top: 6px;
+  font-size: 20px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 60px;
+  padding: 22px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #9ca3af;
+}
+
+.footer-bottom span {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.floating-call a{
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= ADAPTIVE / RESPONSIVE DESIGN ================= */
+
+/* Барои планшетҳо ва экранҳои миёна (то 1024px) */
+@media (max-width: 1240px) {
+  .container, .header-container, .footer-container {
+    width: 95%; /* Контейнерҳо акнун чандир мешаванд */
+  }
+}
+
+/* Барои телефонҳо (то 768px) */
+@media (max-width: 768px) {
+  /* 1. HEADER - Менюро пинҳон мекунем ё содда мекунем */
+  .header {
+    height: auto;
+    padding: 10px 0;
+  }
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .nav {
+    display: none; /* Дар версияи мобилӣ менюи калон лозим нест ё бояд ба "бургер" табдил ёбад */
+  }
+  .header-right {
+    flex-direction: column;
+    width: 100%;
+  }
+  .phone-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* 2. HERO SECTION */
+  .hero {
+    padding: 120px 0 40px;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr; /* Акнун як сутун мешавад */
+    text-align: center;
+    gap: 40px;
+  }
+  .hero-title {
+    font-size: 32px; /* Ҳарфҳоро хурдтар мекунем */
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-primary, .btn-outline {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-stats {
+    justify-content: center;
+    gap: 20px;
+  }
+  .hero-img {
+    height: 350px;
+  }
+  .doctor-card {
+    left: 20px;
+    right: 20px;
+    bottom: -20px;
+    padding: 15px;
+  }
+
+  /* 3. GRIDS (Services, Trust, Reviews, etc.) */
+  .trust-grid, .services-grid, .choose-grid, .reviews-grid, .stats-grid, .location-grid, .footer-container {
+    grid-template-columns: 1fr; /* Ҳамаи сеткаҳо дар телефон яксутуна мешаванд */
+    gap: 20px;
+  }
+
+  /* 4. EQUIPMENT SECTION */
+  .equipment-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .equipment-list li {
+    justify-content: center;
+  }
+
+  /* 5. BOOKING / CONTACT */
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+  .online-contacts {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .online-box {
+    padding: 30px 20px;
+  }
+
+  /* 6. MODAL */
+  .modal-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  /* 7. FLOATING BUTTON */
+  .floating-call {
+    display: flex; /* Дар телефон ин тугма намоён мешавад */
+    right: 15px;
+    bottom: 15px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Барои телефонҳои хеле хурд (то 480px) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 28px;
+  }
+  .section-title {
+    font-size: 26px;
+  }
+  .stat-number {
+    font-size: 30px;
+  }
+}
+
+
+
+
+
+/* ============================================================
+   АДАПТИВИЗАЦИЯ БАРОИ МОБИЛ (МУВОФИҚИ ДИЗАЙНИ ФИГМА)
+   ============================================================ */
+
+/* 1. Танзими умумии контейнерҳо */
+@media (max-width: 1250px) {
+  .container, .header-container, .footer-container {
+    width: 90% !important; /* Контейнер дар экранҳои хурд хурд мешавад */
+    margin: 0 auto;
+  }
+}
+
+/* 2. Барои телефонҳо (768px ва хурдтар) */
+@media (max-width: 768px) {
+  
+  /* --- HEADER --- */
+  .header {
+    height: 70px; /* Баландӣ дар мобил каме хурдтар */
+  }
+  
+  .header-container {
+    width: 92% !important;
+    justify-content: space-between;
+  }
+
+  .nav {
+    display: none; /* Менюи компютериро пинҳон мекунем */
+  }
+
+  .header-right {
+    display: none; /* Тугмаи телефонро дар боло пинҳон мекунем (он дар блоки Book ҳаст) */
+  }
+
+  /* --- HERO SECTION --- */
+  .hero {
+    padding: 100px 0 40px;
+    text-align: center;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr; /* 1 сутун */
+    gap: 30px;
+  }
+
+  .hero-title {
+    font-size: 30px; /* Ҳарфи калон барои телефон */
+    line-height: 1.2;
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* Тугмаҳо зери ҳам */
+    gap: 15px;
+  }
+
+  .btn-primary, .btn-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-img {
+    height: 280px; /* Аксро дар мобил хурдтар мекунем */
+    border-radius: 20px;
+  }
+
+  .doctor-card {
+    position: static; /* Дар мобил корт зери акс меафтад */
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  }
+
+  /* --- GRIDS (Блокҳои сеткагӣ) --- */
+  .trust-grid, 
+  .services-grid, 
+  .choose-grid, 
+  .reviews-grid, 
+  .stats-grid, 
+  .location-grid, 
+  .book-grid {
+    grid-template-columns: 1fr !important; /* Ҳамааш 1 сутунӣ мешавад */
+    gap: 20px;
+  }
+
+  /* --- EQUIPMENT SECTION --- */
+  .equipment-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .equipment-image img {
+    max-height: 250px;
+  }
+
+  /* --- BOOK SECTION & CONTACTS --- */
+  .book-title {
+    font-size: 28px;
+  }
+
+  .online-contacts {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .online-item {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .online-item h3 {
+    font-size: 22px;
+  }
+
+  /* --- FOOTER --- */
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-contact, .social {
+    justify-content: center;
+  }
+
+  /* --- FAQ & MODAL --- */
+  .faq-title {
+    font-size: 28px;
+  }
+
+  .modal-box {
+    width: 92%;
+    padding: 25px;
+  }
+}
+
+/* 3. Барои телефонҳои хеле хурд (480px) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 26px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+
+  .stat-number {
+    font-size: 32px;
+  }
+}
+
+
+
+/* ================= MOBILE LANGUAGE ONLY ================= */
+
+@media (max-width: 768px) {
+  /* 1. Пинҳон кардани менюи линкҳо дар телефон */
+  .nav {
+    display: none !important;
+  }
+
+  /* 2. Танзими Header барои телефон */
+  .header {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .header-container {
+    width: 95% !important;
+    flex-direction: row; /* Лого ва Забон дар як саф */
+    justify-content: space-between;
+  }
+
+  /* 3. Пинҳон кардани тугмаи телефон (Call) ва нишон додани танҳо Забон */
+  .header-right {
+    display: flex !important;
+    gap: 5px;
+  }
+
+  .phone-btn {
+    display: none !important; /* Тугмаи зангро пинҳон мекунем, то ҷойро нагирад */
+  }
+
+  .lang-switch {
+    padding: 2px;
+    border-radius: 8px;
+  }
+
+  .lang-switch button {
+    padding: 6px 10px; /* Тугмаҳои забонро дар мобил каме хурдтар мекунем */
+    font-size: 12px;
+  }
+
+  /* Логоро дар мобил каме хурд мекунем, то ҷой шавад */
+  .logo-circle {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+  }
+  .logo-title { font-size: 14px; }
+  .logo-sub { font-size: 10px; }
+}
+
+
+@media (max-width: 768px) {
+  /* Иҷозат медиҳем, ки блоки логотип васеътар шавад */
+  .header-left {
+    flex: 1; /* Тамоми ҷойи холиро мегирад */
+    min-width: 135px; /* На камтар аз 200px, то матн ҷой шавад */
+    white-space: nowrap; /* Маҷбур мекунад, ки матн дар як сатр истад */
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Хурдтар кардани андозаи шрифт дар мобил, то ки дар як сатр ҷой шавад */
+  .logo-title {
+    font-size: 15px !important; 
+    line-height: 1.2;
+  }
+
+  .logo-sub {
+    font-size: 10px !important;
+    letter-spacing: 0; /* Фосилаи байни ҳарфҳоро кам мекунем */
+  }
+
+  /* Ба блоки забонҳо ҷойи муайян медиҳем, то ба лого халал нарасонад */
+  .header-right {
+    flex-shrink: 0; /* Намегузорад, ки блоки забонҳо логоро фишор диҳад */
+  }
+}
